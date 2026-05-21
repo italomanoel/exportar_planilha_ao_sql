@@ -171,7 +171,7 @@ function insereDadoCsv()
                 // Verifica se a coluna não está na lista de ignoradas
                 if (!in_array($coluna, $colunasIgnoradas)) {
                     $colunasValidasParaInsert[] = $coluna;
-                    // Remove caracteres especiais do nome para criar um placeholder seguro do PDO (ex: :id_cipi)
+                    // Remove caracteres especiais do nome para criar um placeholder seguro do PDO
                     $nomePlaceholderSeguro = preg_replace('/[^a-zA-Z0-9_]/', '', $coluna);
                     $placeholdersParaInsert[] = ":" . $nomePlaceholderSeguro;
                     // Salva o índice original da planilha para resgatar o valor correto depois
